@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Topics-Jump_search-Data_characteristics" external.linked.project.path="$MODULE_DIR$/../../../../../Topics/Jump search/Data characteristics" external.root.project.path="$MODULE_DIR$/../../../../.." external.system.id="GRADLE" external.system.module.group="Phone Book" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/Jump search/Data characteristics">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Jump search/Data characteristics/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Jump search/Data characteristics/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Jump search/Data characteristics/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -1,0 +1,21 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: <span class="math-tex">\(O(n)+a \bmod b\)</span>
+- text: <span class="math-tex">\(O(2*n)\)</span>
+- text: <span class="math-tex">\(O(\sqrt{n})\)</span>
+- text: <span class="math-tex">\(O(n^2)\)</span>
+- text: <span class="math-tex">\(O(log(n))\)</span>
+files:
+- name: src/Main.kt
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    fun main(args: Array<String>) {
+      // put your code here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/17026#comment
+status: Solved
+record: -1

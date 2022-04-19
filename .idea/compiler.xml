@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="17">
+      <module name="Phone_Book.Phone_Book-task-build-classes-java.main" target="11" />
+      <module name="Phone_Book.Phone_Book-task-build-classes-kotlin.main" target="11" />
+      <module name="Phone_Book.Phone_Book-task-build-generated-sources-annotationProcessor-java.main" target="11" />
+      <module name="Phone_Book.Phone_Book-task-build-generated-sources-headers-java.main" target="11" />
+      <module name="Phone_Book.Phone_Book-task-build-reports-tests.main" target="11" />
+      <module name="Phone_Book.Phone_Book-task-build-test-results.main" target="11" />
+      <module name="Phone_Book.Phone_Book-task-build-tmp.main" target="11" />
+      <module name="Phone_Book.Phone_Book-task-out.main" target="11" />
+      <module name="Phone_Book.Phone_Book-task.main" target="11" />
+      <module name="Phone_Book.Topics-Floating-point_types-Evaluate_an_expression.main" target="11" />
+      <module name="Phone_Book.Topics-Floating-point_types-Theory.main" target="11" />
+      <module name="Phone_Book.Topics-Jump_search-Data_characteristics.main" target="11" />
+      <module name="Phone_Book.Topics-Jump_search-Number_of_blocks.main" target="11" />
+      <module name="Phone_Book.Topics-Jump_search-Search_in_a_decreasing_array.main" target="11" />
+      <module name="Phone_Book.Topics-Jump_search-Statements.main" target="11" />
+      <module name="Phone_Book.Topics-Jump_search-Statements__1_.main" target="11" />
+      <module name="Phone_Book.Topics-Jump_search-Statements__2_.main" target="11" />
+      <module name="Phone_Book.Topics-Jump_search-Statements__3_.main" target="11" />
+      <module name="Phone_Book.Topics-Jump_search-Theory.main" target="11" />
+      <module name="Phone_Book.Topics-Jump_search-Time_complexity.main" target="11" />
+      <module name="Phone_Book.Topics-List-Sum_of_numbers.main" target="11" />
+      <module name="Phone_Book.Topics-List-Theory.main" target="11" />
+      <module name="Phone_Book.Topics-Mutable_List-Remove_us.main" target="11" />
+      <module name="Phone_Book.Topics-Mutable_List-Theory.main" target="11" />
+      <module name="Phone_Book.Topics-The_Math_library-Fourth_root.main" target="11" />
+      <module name="Phone_Book.Topics-The_Math_library-Theory.main" target="11" />
+      <module name="Phone_Book.util.main" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

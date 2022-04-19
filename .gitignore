@@ -1,0 +1,39 @@
+# Project exclude paths
+/.gradle/
+/Phone Book/task/build/
+/Phone Book/task/out/production/classes/
+/Phone Book/task/out/test/classes/
+/Topics/Floating-point types/Evaluate an expression/out/
+/Topics/Floating-point types/Evaluate an expression/out/production/classes/
+/Topics/Floating-point types/Theory/out/
+/Topics/Floating-point types/Theory/out/production/classes/
+/Topics/Jump search/Data characteristics/out/
+/Topics/Jump search/Data characteristics/out/production/classes/
+/Topics/Jump search/Number of blocks/out/
+/Topics/Jump search/Number of blocks/out/production/classes/
+/Topics/Jump search/Search in a decreasing array/out/
+/Topics/Jump search/Search in a decreasing array/out/production/classes/
+/Topics/Jump search/Statements/out/
+/Topics/Jump search/Statements/out/production/classes/
+/Topics/Jump search/Statements (1)/out/
+/Topics/Jump search/Statements (1)/out/production/classes/
+/Topics/Jump search/Statements (2)/out/
+/Topics/Jump search/Statements (2)/out/production/classes/
+/Topics/Jump search/Statements (3)/out/
+/Topics/Jump search/Statements (3)/out/production/classes/
+/Topics/Jump search/Theory/out/
+/Topics/Jump search/Theory/out/production/classes/
+/Topics/Jump search/Time complexity/out/
+/Topics/Jump search/Time complexity/out/production/classes/
+/Topics/List/Sum of numbers/out/
+/Topics/List/Sum of numbers/out/production/classes/
+/Topics/List/Theory/out/
+/Topics/List/Theory/out/production/classes/
+/Topics/Mutable List/Remove us/out/
+/Topics/Mutable List/Remove us/out/production/classes/
+/Topics/Mutable List/Theory/out/
+/Topics/Mutable List/Theory/out/production/classes/
+/Topics/The Math library/Fourth root/out/
+/Topics/The Math library/Fourth root/out/production/classes/
+/Topics/The Math library/Theory/out/
+/Topics/The Math library/Theory/out/production/classes/

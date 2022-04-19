@@ -1,0 +1,21 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: If the block size is <b>sqrt(n)</b> where <b>n</b> is the size of an input
+    array, the time complexity is <b>O(sqrt(n))</b>
+- text: The algorithm doesn't work if the square root of an array size is not an integer.
+- text: The algorithm never checks elements from blocks which have already been skipped.
+- text: It can search values in sorted and unsorted arrays.
+files:
+- name: src/Main.kt
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    fun main(args: Array<String>) {
+      // put your code here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3140#comment
+status: Solved
+record: -1

@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: ' In some cases, the algorithm can find an element by performing only a single
+    comparison.'
+- text: The length of the last block may be less than the others.
+- text: The algorithm cannot be used to search in descending sorted arrays.
+- text: The time complexity is <b>O(sqrt(n))</b> if the jump length is <b>n / 2</b>
+    where <b>n</b> is the size of the input array.
+files:
+- name: src/Main.kt
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    fun main(args: Array<String>) {
+      // put your code here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3142#comment
+status: Solved
+record: -1
+custom_name: Statements

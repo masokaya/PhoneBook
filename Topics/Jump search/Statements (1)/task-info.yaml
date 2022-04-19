@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: The algorithm randomly jumps over the array forwards and backwards.
+- text: If the algorithm has found a block that could contain an element, but the
+    element is not present in the block, it makes no sense to continue searching in
+    other blocks.
+- text: It can search in unsorted arrays.
+- text: If the block size is <b>sqrt(n)</b> where <b>n</b> is the size of an input
+    array, the time complexity is <b>O(log n)</b>
+files:
+- name: src/Main.kt
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    fun main(args: Array<String>) {
+      // put your code here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3141#comment
+status: Solved
+record: -1
+custom_name: Statements

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Topics-Jump_search-Time_complexity" external.linked.project.path="$MODULE_DIR$/../../../../../Topics/Jump search/Time complexity" external.root.project.path="$MODULE_DIR$/../../../../.." external.system.id="GRADLE" external.system.module.group="Phone Book" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/Jump search/Time complexity">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Jump search/Time complexity/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Jump search/Time complexity/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Jump search/Time complexity/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

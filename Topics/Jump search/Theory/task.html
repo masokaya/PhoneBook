@@ -1,0 +1,76 @@
+<h2>Jump search</h2>
+<html>
+ <head></head>
+ <body>
+  <p><strong>Jump search</strong> (also known as <strong>block</strong><strong> search</strong>) is an algorithm for finding the position of an element in a sorted array. Unlike linear search, it doesn't compare each element of an array with the target value. Instead, to find the target value, we can represent the array as a sequence of blocks:</p> 
+  <p style="text-align: center;"><img alt="" height="108" name="Jump search 1.svg" src="https://ucarecdn.com/7f57bec8-2c50-4aef-917e-aa356f95dea5/" width="376"></p> 
+  <p>The optimal block size is <span class="math-tex">\(\sqrt(n)\)</span><strong>, </strong>where <span class="math-tex">\(n\)</span> is the size of the array. In this case, the algorithm performs <span class="math-tex">\(\sqrt(n) + \sqrt(n)\)</span><strong> </strong>comparisons in the worst case, so the time complexity is <span class="math-tex">\(O(\sqrt(n))\)</span>.<strong> </strong>This algorithm is more efficient than the linear search algorithm.</p> 
+  <h5 id="basic-principles">Basic principles</h5> 
+  <p>Consider the basic principles of this algorithm for searching in ascending sorted arrays. Note that it can search in descending sorted arrays as well.</p> 
+  <p>Principle 1. For ascending sorted arrays, any value from a block is less than or equal to any value from the following block.</p> 
+  <p>Principle 2. If the target element is not present at the beginning of the first block and its right border exceeds the target element, it is not present in the array at all.</p> 
+  <p>The algorithm jumps over blocks to find the block that may contain the target element. Hence, the algorithm compares the right borders of blocks to the target element.</p> 
+  <h5 id="searching-process">Searching process</h5> 
+  <p>If the right border of a block is equal to the target element, we have found it. Sometimes we need to search the target with the minimum index.</p> 
+  <p>If the right border of a block is greater than the target element, we have found the block that may<em> </em>contain the target value. When we have found such a block, the algorithm performs backward linear search within that block. If it has found the target value, it returns its index; otherwise, the array does not contain the target value.</p> 
+  <p>Sometimes blocks don't include the first array element, and then the algorithm works in the same way as described above. The complexity of the algorithm doesn't change.</p> 
+  <p style="text-align: center;"><img alt="" height="150" name="Jump search 2.svg" src="https://ucarecdn.com/dcaa0784-bd52-4e59-ae07-5b213843dbe6/" width="403"></p> 
+  <p>Further, we will consider the algorithm with the jump size equal to <span class="math-tex">\(\sqrt(n)\)</span>.</p> 
+  <p>Please keep in mind the following:</p> 
+  <ul> 
+   <li>If <span class="math-tex">\(\sqrt(n)\)</span> is not an integer value, we take only the integer part, using the <strong>floor function</strong>;</li> 
+   <li>If the index of the following element to jump to is greater than the last element index, we jump to the last element.</li> 
+  </ul> 
+  <h5 id="example">Example</h5> 
+  <p>Suppose we have a sorted ascending array of nine integers:</p> 
+  <p style="text-align: center;"><img alt="" height="72" name="Jump search 3.svg" src="https://ucarecdn.com/5ea65c6e-8ac1-4f99-a468-7514ac75d2c2/" width="374"></p> 
+  <p>The input array has nine elements with indices from <span class="math-tex">\(1\)</span> to <span class="math-tex">\(9\)</span>. We want to find the index of the value <span class="math-tex">\(26\)</span> implementing jump search.</p> 
+  <p>Our first step would be finding the block that may contain the target value. The jump length is <span class="math-tex">\(\sqrt(9) = 3\)</span>.</p> 
+  <p>1) The first element (10) is less than the target value (26), so we jump to the next element with the index <span class="math-tex">\(1 + 3 = 4\)</span>.</p> 
+  <p>2) The element with the index <span class="math-tex">\(4\)</span> (20) is less than the target value (26); we jump to the next element with the index <span class="math-tex">\(4+ 3 = 7\)</span>.</p> 
+  <p>3) The element with the index <span class="math-tex">\(7\)</span> (30) is greater than the target value (26).</p> 
+  <p style="text-align: center;"><img alt="" height="121" name="Jump search 4.svg" src="https://ucarecdn.com/7ee602fa-d509-4ca1-87fb-f1f339e3d9ae/" width="379"></p> 
+  <p>During the stage, we store indices of the current and the previously considered element to use them in the second stage.</p> 
+  <p>Second, we perform a<strong> backward linear search.</strong></p> 
+  <p>We have the left and the right indices of the block that may contain the target value. The left is <em>k2,</em> the right is <em>k3</em>. Now we will consider only the elements belonging to this block.</p> 
+  <p style="text-align: center;"><img alt="" height="180" name="Jump search 5.svg" src="https://ucarecdn.com/1a0e08e4-e72a-40ed-a744-8e7a6b576e35/" width="381"></p> 
+  <p>After finishing linear search between these indices, we have found our element (26) and its index, <span class="math-tex">\(6\)</span>.</p> 
+  <p>Thus, the idea is that the algorithm<strong> </strong>finds the blocks where the target element may be present and then uses linear search within the block.</p> 
+  <h5 id="pseudocode-of-the-jump-search-function">Pseudocode of the jump search function</h5> 
+  <pre><code class="java">function jump_search(array, value):
+    step = floor(sqrt(len(array)))              // step to move to the next block (rounding the value of the 
+                                                // square root of the length of the array to a smaller integer)
+    curr = 1                                    // index of the current element (the check starts from 1)
+    while curr &lt;= len(array):                   // loop while the index is not bigger than the length of the array
+        if array[curr] == value then            // if the current value is equal to the target value
+            return curr                         // return the index
+        elif array[curr] &gt; value then           // else if the current value is greater than the target one
+            ind = curr - 1                      // we start the search inside the block from the end of the block
+                                                // the starting index is to the left of the right border of the block (curr)
+            while ind &gt; curr-step and ind &gt;= 1: // while the new index has not gone beyond the left border 
+                                                // of the block (curr-step) or array (1)
+                if array[ind] == value then     // if the current value is equal to the target value
+                    return ind                  // return the index
+                ind = ind - 1                        // reducing the index of the current element
+            return -1                           // the target value is not in the array, so return -1
+        curr = curr + step                            // increasing the index of the current element by a step 
+                                                // to move to the next block
+    ind = len(array)                            // start checking the last block (if its length has turned out to be less)
+                                                // the starting index is equal to the last one
+    while ind &gt; curr-step:                      // while the new index has not gone beyond the left border of the block (curr-step)
+        if array[ind] == value then             // if the current value is equal to the target value
+            return ind                          // return the index
+        ind = ind - 1                                // reducing the index of the current element
+    return -1                                   // the target value is not in the array, so return -1</code></pre> 
+  <h5 id="harder-faster-stronger">Harder, faster, stronger</h5> 
+  <p>In this algorithm, once we find the block that may contain the value, we perform a backward linear search. However, what we could also do is perform another jump search within the block (backward or forward) and then perform jump search recursively until we have only one element.</p> 
+  <p>This version will perform <span class="math-tex">\(\sqrt(n) + \sqrt(\sqrt(n)) + \sqrt(\sqrt(\sqrt(n))) + ... + 1\)</span> comparisons in the worst case. It's faster than the base implementation, but is still <strong><span class="math-tex">\(O(\sqrt(n))\)</span></strong>.</p> 
+  <h5 id="conclusion">Conclusion</h5> 
+  <p>This topic has hopefully made it clear to you what the jump search algorithm is and how it works. Let's recap the main points made above:</p> 
+  <ul> 
+   <li>We use jump search to find an element's position in a sorted array;</li> 
+   <li>The algorithm divides the array into several blocks and compares the right border of the blocks sequentially with the target element, in order to find the block that might contain it; then it performs backward linear search within that block to find the target element;</li> 
+   <li>It's time complexity is <span class="math-tex">\(O(\sqrt(n))\)</span>.</li> 
+  </ul>
+ </body>
+</html>
